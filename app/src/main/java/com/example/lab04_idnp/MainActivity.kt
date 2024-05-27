@@ -10,6 +10,7 @@ import androidx.fragment.app.commit
 
 class MainActivity : AppCompatActivity() {
     private lateinit var txtMensaje: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -18,59 +19,27 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
-
         }
 
-        txtMensaje = findViewById<TextView>(R.id.txtMensaje)
+        txtMensaje = findViewById(R.id.txtMensaje)
 
-        val blankFragment = BlankFragment.newInstance(response)
+        val registerFragment = BlankFragment.newInstance { usuario ->
+            showUserInfo(usuario)
+        }
 
-        supportFragmentManager.commit{
+        supportFragmentManager.commit {
             setReorderingAllowed(true)
-            replace(R.id.frameLayout, blankFragment)
+            replace(R.id.frameLayout, registerFragment)
         }
     }
 
-
-
-    val response: (String) -> Unit =  { mensaje ->
-
-        txtMensaje.text=mensaje
+    private fun showUserInfo(user: Usuario) {
+        txtMensaje.text = """
+            Nombre: ${user.nombre}
+            Apellido: ${user.apellido}
+            Email: ${user.email}
+            Teléfono: ${user.telefono}
+            Username: ${user.username}
+        """.trimIndent()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

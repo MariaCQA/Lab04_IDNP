@@ -9,20 +9,51 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="100dp">
+        android:padding="16dp">
 
         <EditText
-            android:id="@+id/edtMensaje"
+            android:id="@+id/edtNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:text="" />
+            android:hint="Nombre" />
+
+        <EditText
+            android:id="@+id/edtApellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/edtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Teléfono"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/edtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/btnEnviarMensaje"
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="boton" />
+            android:text="Registrar" />
     </LinearLayout>
 </FrameLayout>

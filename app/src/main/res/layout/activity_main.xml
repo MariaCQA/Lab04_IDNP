@@ -12,7 +12,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,15 +22,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-
         android:text="Mensaje: "
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
